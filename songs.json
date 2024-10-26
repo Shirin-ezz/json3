@@ -1,0 +1,63 @@
+
+[
+    {
+        "title": "Bohemian Rhapsody",
+        "artist": "Queen",
+        "year": 1975,
+        "genres": ["Rock"]
+    },
+    {
+        "title": "Imagine",
+        "artist": "John Lennon",
+        "year": 1971,
+        "genres": ["Pop", "Rock"]
+    },
+    {
+        "title": "Billie Jean",
+        "artist": "Michael Jackson",
+        "year": 1982,
+        "genres": ["Pop"]
+    },
+    {
+        "title": "Hotel California",
+        "artist": "Eagles",
+        "year": 1976,
+        "genres": ["Rock", "Country"]
+    },
+    {
+        "title": "Take Me Home, Country Roads",
+        "artist": "John Denver",
+        "year": 1971,
+        "genres": ["Country"]
+    },
+    {
+        "title": "Sweet Child O' Mine",
+        "artist": "Guns N' Roses",
+        "year": 1987,
+        "genres": ["Rock", "Metal"]
+    },
+    {
+        "title": "Smells Like Teen Spirit",
+        "artist": "Nirvana",
+        "year": 1991,
+        "genres": ["Rock"]
+    },
+    {
+        "title": "Shape of You",
+        "artist": "Ed Sheeran",
+        "year": 2017,
+        "genres": ["Pop"]
+    },
+    {
+        "title": "Jolene",
+        "artist": "Dolly Parton",
+        "year": 1973,
+        "genres": ["Country"]
+    },
+    {
+        "title": "Back in Black",
+        "artist": "AC/DC",
+        "year": 1980,
+        "genres": ["Rock", "Metal"]
+    }
+]
