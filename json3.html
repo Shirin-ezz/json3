@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Songs by Genre</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Filter Songs by Genre</h1>
+
+    <!-- Dropdown to select genre -->
+    <form id="filter-form">
+        <label for="genre-select">Choose a genre:</label>
+        <select id="genre-select"></select>
+        <button type="button" id="filter-btn">Filter</button>
+    </form>
+
+    <div id="song-titles"></div>
+
+    <script>
+        let songData = []; // Variable to store the JSON data
+
+        // Fetch songs.json and dynamically populate the genre dropdown
+        $.get("songs.json", function(data) {
+            songData = data;
+            let genres = new Set();
+
+            // Collect all genres from the song list
+            songData.forEach(song => {
+                song.genres.forEach(genre => genres.add(genre));
+            });
+
+            // Add genres to the dropdown
+            let genreSelect = document.getElementById('genre-select');
+            genres.forEach(genre => {
+                let option = document.createElement('option');
+                option.value = genre;
+                option.text = genre;
+                genreSelect.appendChild(option);
+            });
+        });
+
+        // Event handler for the "Filter" button
+        document.getElementById('filter-btn').addEventListener('click', function() {
+            let selectedGenre = document.getElementById('genre-select').value;
+            let output = '';
+
+            // Filter songs by the selected genre and display the titles
+            songData.forEach(song => {
+                if (song.genres.includes(selectedGenre)) {
+                    output += `<p>${song.title}</p>`;
+                }
+            });
+
+            document.getElementById('song-titles').innerHTML = output;
+        });
+    </script>
+</body>
+</html>
